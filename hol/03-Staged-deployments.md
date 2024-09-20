@@ -47,7 +47,7 @@ Add an input of the type environment to the `workflow_dispatch` trigger that you
 1. Now add 3 jobs to the workflow file:
   - Test: runs on `ubuntu-latest` after `Build`. Only runs when the workflow was triggered manually. Runs on the environment `Test`. The job writes `Testing...` to the workflow log.
   - Load-Test: runs on `ubuntu-latest` after `Build`. Only runs when the workflow was triggered manually. Runs on the environment `Load-Test`. The job writes `Testing...` to the workflow log and sleeps for 15 seconds.
-  - Production: runs on `ubuntu-latest` after `Test` and `Load-Test`. Deploys to the environment `Production` onyl if this was selected as the input parameter. The environment has the URL `https://writeabout.net`. To simulate deployment, the job will execute 5 steps. Each step with writes `Step x deploying...` to the workflow log and sleeps for 10 seconds.
+  - Production: runs on `ubuntu-latest` after `Test` and `Load-Test`. Deploys to the environment `Production` only if this was selected as the input parameter. The environment has the URL `https://writeabout.net`. To simulate deployment, the job will execute 5 steps. Each step with writes `Step x deploying...` to the workflow log and sleeps for 10 seconds.
 
 <details>
   <summary>Solution</summary>
